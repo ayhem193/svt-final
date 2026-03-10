@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pollution de l'eau - Dossier</title>
+<style>
+body{font-family:Arial, Helvetica, sans-serif;margin:0;background:#eef3fb}
+header{background:#1e88e5;color:white;text-align:center;padding:40px}
+.container{display:flex;flex-direction:column;align-items:center;gap:25px;padding:60px}
+button{width:320px;padding:25px;font-size:22px;font-weight:bold;border:none;border-radius:12px;background:#1565c0;color:white;cursor:pointer;transition:0.3s}
+button:hover{background:#0d47a1;transform:scale(1.05)}
+.page{display:none;max-width:900px;margin:auto;padding:40px;text-align:center}
+.page h2{color:#1565c0}
+.back{margin-top:30px;padding:12px 20px;font-size:16px;background:#1e88e5}
+.card{background:white;padding:25px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+img{max-width:300px;border-radius:12px;margin-top:20px}
+</style>
+
+<script>
+function openPage(id){
+  document.getElementById("home").style.display="none";
+  let pages=document.querySelectorAll(".page");
+  pages.forEach(p=>p.style.display="none");
+  document.getElementById(id).style.display="block";
+}
+
+function goHome(){
+  let pages=document.querySelectorAll(".page");
+  pages.forEach(p=>p.style.display="none");
+  document.getElementById("home").style.display="flex";
+}
+</script>
+</head>
+<body>
+
+<header>
+<h1>Pollution de l'eau et santé</h1>
+<p>✨MADE BY AYHEM✨</p>
+</header>
+
+<!-- PAGE ACCUEIL -->
+<div id="home" class="container">
+<button onclick="openPage('intro')">Introduction</button>
+<button onclick="openPage('facteurs')">Facteurs de pollution</button>
+<button onclick="openPage('effets')">Effets sur la santé</button>
+<button onclick="openPage('solutions')">Solutions</button>
+<button onclick="openPage('fin')">Fin</button>
+</div>
+
+<!-- INTRODUCTION -->
+<div id="intro" class="page">
+<div class="card">
+<h2>Introduction</h2>
+<p>L'eau est une ressource essentielle pour la vie humaine, les animaux et les plantes. Elle est utilisée pour boire, cuisiner, l'agriculture et l'industrie. Cependant, les activités humaines provoquent une pollution importante de l'eau.</p>
+<button class="back" onclick="goHome()">Retour à l'accueil</button>
+</div>
+</div>
+
+<!-- FACTEURS -->
+<div id="facteurs" class="page">
+<div class="card">
+<h2>Les facteurs de pollution de l'eau</h2>
+<h3>Pollution industrielle</h3>
+<p>Les industries peuvent rejeter des produits toxiques dans les rivières et les mers.</p>
+<h3>Pollution agricole</h3>
+<p>Les pesticides et engrais peuvent contaminer l'eau.</p>
+<h3>Eaux usées domestiques</h3>
+<p>Les eaux usées contiennent des bactéries et des produits chimiques.</p>
+<h3>Déchets plastiques</h3>
+<p>Les plastiques se transforment en microplastiques qui polluent l'eau.</p>
+<button class="back" onclick="goHome()">Retour à l'accueil</button>
+</div>
+</div>
+
+<!-- EFFETS -->
+<div id="effets" class="page">
+<div class="card">
+<h2>Effets de la pollution de l'eau sur la santé</h2>
+<ul>
+<li>Choléra</li>
+<li>Typhoïde</li>
+<li>Dysenterie</li>
+<li>Diarrhées</li>
+</ul>
+<h3>Intoxications chimiques</h3>
+<p>Certaines substances toxiques présentes dans l'eau 
+    peuvent provoquer des problèmes neurologiques, des maladies rénales ou des cancers.</p>
+<h3>Perturbations hormonales</h3>
+<p>Certains produits chimiques perturbent le système hormonal et peuvent affecter la fertilité ou le développement.</p>
+
+<button class="back" onclick="goHome()">Retour à l'accueil</button>
+</div>
+</div>
+
+<!-- SOLUTIONS -->
+<div id="solutions" class="page">
+<div class="card">
+<h2>Solutions</h2>
+<ul>
+<li>Améliorer le traitement des eaux usées</li>
+<li>Réduire les pesticides</li>
+<li>Recycler les plastiques</li>
+<li>Protéger l'environnement</li>
+</ul>
+<button class="back" onclick="goHome()">Retour à l'accueil</button>
+</div>
+</div>
+
+<!-- FIN -->
+<div id="fin" class="page">
+<div class="card">
+<h2>Fin</h2>
+<p>j'espere que cette présentation vous a aidé à mieux comprendre l'importance de protéger l'eau et l'environnement 
+    et merci a votre service et bien venu</p>
+
+<button class="back" onclick="goHome()">Retour à l'accueil</button>
+
+</body>
